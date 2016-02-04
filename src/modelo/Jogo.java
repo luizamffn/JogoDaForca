@@ -45,13 +45,14 @@ public class Jogo {
 		auxiliarPalavras = "";
 		letra = letra.toUpperCase();
 		int cont = 0;
-		for (String ditas : PalavraJaDitas) {
-			auxiliarPalavras += ditas + " ";
-			
-		}
 		
 		if(!PalavraJaDitas.contains(letra)){
 			PalavraJaDitas.add(letra);
+			
+			for (String ditas : PalavraJaDitas) {
+				auxiliarPalavras += ditas + " ";
+				
+			}
 			for (int i = 0; i < palavraSorteada.length; i++) {
 				if(palavraSorteada[i].toUpperCase().equals(letra)){
 					palavraDaRodada[i] = letra;
