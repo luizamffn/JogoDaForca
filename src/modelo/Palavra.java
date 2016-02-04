@@ -11,9 +11,9 @@ public class Palavra {
 	
 	public Palavra() {
 		tema = new Tema();
-		nome.add(new String[]{"Cachorro", "Gato", "Papagaio", "Periquito"});
-		nome.add(new String[]{"Banana", "Maca", "Laranja", "Abacaxi"});
-		nome.add(new String[]{"Brasil", "Alemanha", "Portugual", "Australia"});
+		nome.add(new String[]{"Cachorro", "Gato", "Papagaio", "Periquito", "Vaca", "Camaleao", "Gaviao"});
+		nome.add(new String[]{"Banana", "Maca", "Laranja", "Abacaxi", "Pera", "Siriguela"});
+		nome.add(new String[]{"Brasil", "Alemanha", "Portugual", "Australia", "Azerbaijao", "Mongolia"});
 		nome.add(new String[]{"Computador", "Scanner", "Smarthphone", "Camera", "Relogio"});
 	}
 	

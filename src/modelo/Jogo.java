@@ -31,7 +31,8 @@ public class Jogo {
 	}
 	
 	public String exibir() {
-		String dados ="Pontos: " + jogador.getPontos() + "\n"
+		String dados ="Jogador: " + jogador.getNome() + "\n"
+				+ "Pontos: " + jogador.getPontos() + "\n"
 				+ "Palavras usadas : " + auxiliarPalavras + "\n"
 				+ boneco + "\n"
 				+"Dica: " +  palavra.getDica()

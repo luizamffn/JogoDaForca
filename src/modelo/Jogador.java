@@ -21,10 +21,10 @@ public class Jogador implements Comparable<Jogador>{
 	}
 
 	 public int compareTo(Jogador outraJogador) {
-	        if (this.pontos < outraJogador.pontos) {
+	        if (this.pontos > outraJogador.pontos) {
 	            return -1;
 	        }
-	        if (this.pontos > outraJogador.pontos) {
+	        if (this.pontos < outraJogador.pontos) {
 	            return 1;
 	        }
 	        return 0;
