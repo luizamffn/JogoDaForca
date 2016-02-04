@@ -13,6 +13,7 @@ public class Jogo {
 	private String[] palavraSorteada;
 	private Set<String> PalavraJaDitas = new HashSet<>();
 	private String auxiliar = "";
+	private String auxiliarPalavras = "";
 	
 	public Jogo(Jogador jogador) {
 		this.jogador = jogador;
@@ -31,6 +32,7 @@ public class Jogo {
 	
 	public String exibir() {
 		String dados ="Pontos: " + jogador.getPontos() + "\n"
+				+ "Palavras usadas : " + auxiliarPalavras + "\n"
 				+ boneco + "\n"
 				+"Dica: " +  palavra.getDica()
 				+ "\n" + auxiliar;
@@ -40,14 +42,13 @@ public class Jogo {
 	
 	
 	public void DigaUmaLetra(String letra) {
+		auxiliarPalavras = "";
 		letra = letra.toUpperCase();
 		int cont = 0;
-//		System.out.println("********");
-//		for (String ditas : PalavraJaDitas) {
-//			System.out.print(ditas + " ");
-//			
-//		}
-//		System.out.println("\n********");
+		for (String ditas : PalavraJaDitas) {
+			auxiliarPalavras += ditas + " ";
+			
+		}
 		
 		if(!PalavraJaDitas.contains(letra)){
 			PalavraJaDitas.add(letra);

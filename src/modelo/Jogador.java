@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.Collections;
-
 public class Jogador implements Comparable<Jogador>{
 	private String nome;
 	private int pontos = 0;
