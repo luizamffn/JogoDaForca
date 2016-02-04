@@ -1,6 +1,8 @@
 package modelo;
 
-public class Jogador {
+import java.util.Collections;
+
+public class Jogador implements Comparable<Jogador>{
 	private String nome;
 	private int pontos = 0;
 	
@@ -19,7 +21,19 @@ public class Jogador {
 	public String getNome() {
 		return nome;
 	}
-	
 
+	 public int compareTo(Jogador outraJogador) {
+	        if (this.pontos < outraJogador.pontos) {
+	            return -1;
+	        }
+	        if (this.pontos > outraJogador.pontos) {
+	            return 1;
+	        }
+	        return 0;
+	}
 	
+	@Override
+	public String toString() {
+		return this.nome + " " +  this.pontos + "\n";
+	}
 }

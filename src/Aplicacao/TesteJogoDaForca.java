@@ -1,18 +1,21 @@
 package Aplicacao;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import modelo.Jogador;
 import modelo.Jogo;
 
 public class TesteJogoDaForca {
-	
+	public static List<Jogador> rank = new ArrayList<>();
 	public static void main(String[] args) {
 		Jogador jogador;
 		Jogo jogo;
-		int erros;
 		
-		
-		
+
 		while (true) {
 			int op = menu();
 			switch (op) {
@@ -25,24 +28,27 @@ public class TesteJogoDaForca {
 				jogo = new Jogo(jogador);
 				
 				while (true) {
-					erros = 0;
 					String letra = JOptionPane.showInputDialog(jogo.exibir());
 					jogo.DigaUmaLetra(letra);
 					
 					int comp = jogo.comparacao();
 				
 //					System.out.println(jogo.getBoneco().getErro());		
-					if (jogo.getBoneco().getErro() > 6) {
+					if (jogo.getBoneco().getErro() == 6) {
 						msg("Voce Perdeu, tente novamente!");
 						break;
 					}
 					
 					if (comp == 1) {
-						msg("Parabens" + jogo.getJogador().getNome() + ", voce acertou!!"
+						msg("Parabens " + jogo.getJogador().getNome() + ", voce acertou!!"
 								+ "\nA palavra era: " + jogo.getAuxiliar());
 						break;
 					}
 				}
+				rank.add(jogador);
+				break;
+			case 2:
+				msg ("Ranking \n" + ranking());
 				break;
 			default:
 				msg("Opcao Invalida");
@@ -53,7 +59,16 @@ public class TesteJogoDaForca {
 		}
 		
 	}
-	
+
+	private static String ranking() {
+		Collections.sort(rank);	
+		
+		String ordem = "";
+		ordem = rank.toString();
+		
+		return ordem;
+	}
+
 	public static int menu() {
 		String menu = "#####Jogo da Forca######\n"+
 						"1- Iniciar Jogo\n"+

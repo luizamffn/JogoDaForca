@@ -8,10 +8,10 @@ public class Boneco {
 	public String[] bonecoExibir() {
 		bonecoExibido[0] = "иии|";
 		if (erro ==1) bonecoExibido[1] = "\n   O\n";
-		if (erro ==2) bonecoExibido[2] = "  /";
+		if (erro ==2) bonecoExibido[2] = "   /";
 		if (erro ==3) bonecoExibido[3] = "|";
 		if (erro ==4) bonecoExibido[4] = "\\ \n";
-		if (erro ==5) bonecoExibido[5] = "  / ";
+		if (erro ==5) bonecoExibido[5] = "   / ";
 		if (erro ==6) bonecoExibido[6]= "\\";
 		
 		return bonecoExibido;
